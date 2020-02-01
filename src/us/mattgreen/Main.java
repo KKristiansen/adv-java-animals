@@ -14,7 +14,21 @@ public class Main {
         //zoo.add(new Dog(true, "Bean"));
         //zoo.add(new Cat(9, "Charlie"));
         //zoo.add(new Teacher(44, "Stacy Read"));
-        System.out.println("");
+
+        //Kristopher Kristiansen lines
+        ArrayList <AnimalType> types = new ArrayList<AnimalType>();
+        Scanner kb = new Scanner(System.in);
+        String type, choice;
+        //Ask user for Animal types
+        do {
+            System.out.print("Enter Animal Type: ");
+            type = kb.nextLine();
+
+            types.add(new AnimalType(type,0));
+            System.out.print("Add More (Y/N)? ");
+            choice = kb.nextLine();
+        } while (choice.equalsIgnoreCase("y"));
+
         // End Lines to Replace
 
 
