@@ -16,21 +16,10 @@ public class Main {
         //zoo.add(new Teacher(44, "Stacy Read"));
 
         //Kristopher Kristiansen lines
-        ArrayList <AnimalType> types = new ArrayList<AnimalType>();
-        Scanner kb = new Scanner(System.in);
-        String type, choice;
-        //Ask user for Animal types
-        do {
-            System.out.print("Enter Animal Type: ");
-            type = kb.nextLine();
-
-            types.add(new AnimalType(type,0));
-            System.out.print("Add More (Y/N)? ");
-            choice = kb.nextLine();
-        } while (choice.equalsIgnoreCase("y"));
+        GetUserList getUserList = new GetUserList(zoo);
+        zoo = getUserList.getZoo();
 
         // End Lines to Replace
-
 
         for (Talkable thing : zoo) {
             printOut(thing);
